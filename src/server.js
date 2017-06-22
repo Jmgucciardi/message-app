@@ -3,6 +3,7 @@ import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import MessagesRoutes from './routers/MessagesRoutes';
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Message-App');
@@ -20,7 +21,8 @@ const PORT = 3001;
 nextApp.prepare().then(() => {
   const app = express();
 
-  app.use(bodyParser.json());
+  app.use(bodyParser.json())
+  .use(MessagesRoutes);
 
   app.get('*', (request, response) => {
     return handle(request, response);
