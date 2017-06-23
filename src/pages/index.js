@@ -17,22 +17,16 @@ function indexPage() {
 
   return (
     <div>
-      <h1>Portfolio</h1>
+      <h1>Welcome</h1>
       <p><Link href="/about">
       <a>About</a>
       </Link></p>
       <p>
-      <a href="https://github.com/Jmgucciardi" target="_blank" onClick={event => {
+      <a href="https://github.com/Jmgucciardi/message-app" target="_blank" onClick={event => {
         event.preventDefault();
-        window.open('https://github.com/Jmgucciardi');}}>GitHub</a>
+        window.open('https://github.com/Jmgucciardi/message-app');}}>GitHub</a>
 
       </p>
-        <p><Link href="/pets">
-          <a>Pets</a>
-        </Link></p>
-          <p><Link href="/vehicles">
-          <a>Vehicles</a>
-        </Link></p>
         <p><Link href="/users">
         <a>Users</a>
       </Link></p>
