@@ -73,23 +73,23 @@ var GetMessages = function (_React$Component) {
         userDivs = this.props.messages.map(function (d, i) {
           return _react2.default.createElement("div", { key: i, __source: {
               fileName: _jsxFileName,
-              lineNumber: 33
+              lineNumber: 34
             }
           }, _react2.default.createElement("ul", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 34
+              lineNumber: 35
             }
           }, _react2.default.createElement("li", {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 35
+              lineNumber: 36
             }
           }, " ", d.message, " "), _react2.default.createElement("button", { onClick: function onClick() {
               return _this2.props.deleteMessages("" + d._id);
             }, __source: {
               fileName: _jsxFileName,
-              lineNumber: 37
+              lineNumber: 38
             }
           }, "Remove")));
         });
@@ -109,7 +109,7 @@ var GetMessages = function (_React$Component) {
           left: '50%'
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 51
         }
       }, _react2.default.createElement("button", { onClick: function onClick() {
           _this2.setState({
@@ -117,7 +117,7 @@ var GetMessages = function (_React$Component) {
           });
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 62
         }
       }, buttonText), userDivs);
     }

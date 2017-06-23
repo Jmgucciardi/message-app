@@ -19,10 +19,10 @@ export function loadMessages() {
   };
 }
 
-function messagesLoaded(users) {
+function messagesLoaded(message) {
   return {
     type: 'MESSAGES_LOADED',
-    value: users
+    value: message
   };
 }
 
