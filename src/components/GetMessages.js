@@ -24,12 +24,11 @@ const UserDivStyles = {
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   backgroundColor: 'white',
   transition: 'boxShadow 0.3s, border 0.3s',
-  color: 'limegreen',
+
 };
 
 const TextStyles = glamorous.text(TextContainer);
 const MessageDiv = glamorous.div(UserDivStyles);
-
 
 
 class GetMessages extends React.Component {
@@ -46,26 +45,19 @@ class GetMessages extends React.Component {
   render() {
     this.props.loadMessages()
     let userDivs = '';
-
-
     userDivs = this.props.messages.map((d,i) => {
       return (
         <MessageDiv key = {i}>
           <div>
               UserName: {d.message}
-              <button onClick={() =>
-                this.props.deleteMessages(`${d._id}`)}>
-                Remove
-              </button>
+            
           </div>
           </MessageDiv>
-
       );
     });
-
     return (
   <TextStyles>
-      {userDivs}
+    {userDivs}
   </TextStyles>
     );
   }

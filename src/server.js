@@ -3,7 +3,8 @@ import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-import MessagesRoutes from './routers/MessagesRoutes';
+import MessagesRoutes from './routers/messagesRoutes';
+import UserRoutes from './routers/usersRoutes';
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Message-App');
@@ -22,7 +23,10 @@ nextApp.prepare().then(() => {
   const app = express();
 
   app.use(bodyParser.json())
-  .use(MessagesRoutes);
+  .use(MessagesRoutes)
+  .use(UserRoutes);
+
+
 
   app.get('*', (request, response) => {
     return handle(request, response);

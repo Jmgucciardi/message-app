@@ -4,6 +4,7 @@ import withRedux from 'next-redux-wrapper';
 import {initStore} from '../store';
 import { css } from 'glamor';
 
+
 function indexPage() {
   css.global('html, body', {
     padding: '3rem 1rem',
@@ -18,17 +19,14 @@ function indexPage() {
   return (
     <div>
       <h1>Welcome</h1>
-      <p><Link href="/about">
-      <a>About</a>
-      </Link></p>
       <p>
       <a href="https://github.com/Jmgucciardi/message-app" target="_blank" onClick={event => {
         event.preventDefault();
         window.open('https://github.com/Jmgucciardi/message-app');}}>GitHub</a>
 
       </p>
-        <p><Link href="/users">
-        <a>Users</a>
+        <p><Link href="/createProfile">
+        <a>Create Profile</a>
       </Link></p>
       <p><Link href="/messages">
       <a>Messages</a>

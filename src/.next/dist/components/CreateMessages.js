@@ -90,12 +90,23 @@ var CreateMessages = function (_React$Component) {
     _this.state = {
       messages: {
         message: ''
+      },
+      users: {
+        username: ''
       }
     };
     return _this;
   }
 
   (0, _createClass3.default)(CreateMessages, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      if (this.props.match) {
+        var id = this.props.match.params.id;
+        this.props.getUsers(id);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -103,12 +114,12 @@ var CreateMessages = function (_React$Component) {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 63
         }
       }, _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 64
         }
       }, _react2.default.createElement('form', { onSubmit: function onSubmit(e) {
           e.preventDefault();
@@ -117,12 +128,12 @@ var CreateMessages = function (_React$Component) {
           }
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 65
         }
       }, _react2.default.createElement(Basic, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 71
         }
       }, 'UserName:', _react2.default.createElement(TextInput, { onChange: function onChange(e) {
           var messages = { message: e.target.value };
@@ -131,12 +142,12 @@ var CreateMessages = function (_React$Component) {
           });
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 73
         }
       }), _react2.default.createElement(ButtonMessageSubmit, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 79
         }
       }, 'Submit')))));
     }

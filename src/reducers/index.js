@@ -6,8 +6,15 @@ function messages(state = [], action) {
   }
   return state;
 }
+function users(state = [], action) {
+  if (action.type === 'USERS_LOADED') {
+    return action.value;
+  }
+  return state;
+}
 
 const rootReducer = combineReducers({
-  messages
+  messages,
+  users
 });
 export default rootReducer;

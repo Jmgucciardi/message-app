@@ -59,8 +59,8 @@ var UserDivStyles = {
   border: '1px solid lightblue',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   backgroundColor: 'white',
-  transition: 'boxShadow 0.3s, border 0.3s',
-  color: 'limegreen'
+  transition: 'boxShadow 0.3s, border 0.3s'
+
 };
 
 var TextStyles = _glamorous2.default.text(TextContainer);
@@ -87,34 +87,24 @@ var GetMessages = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this2 = this;
-
       this.props.loadMessages();
       var userDivs = '';
-
       userDivs = this.props.messages.map(function (d, i) {
         return _react2.default.createElement(MessageDiv, { key: i, __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 50
           }
         }, _react2.default.createElement('div', {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 51
           }
-        }, 'UserName: ', d.message, _react2.default.createElement('button', { onClick: function onClick() {
-            return _this2.props.deleteMessages('' + d._id);
-          }, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 56
-          }
-        }, 'Remove')));
+        }, 'UserName: ', d.message));
       });
-
       return _react2.default.createElement(TextStyles, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 59
         }
       }, userDivs);
     }

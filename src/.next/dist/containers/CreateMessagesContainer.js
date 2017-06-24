@@ -20,6 +20,10 @@ function mapDispatchToProps(dispatch) {
   return {
     createMessages: function createMessages(message) {
       dispatch((0, _actions.createMessages)(message));
+    },
+    getUsers: function getUsers(id) {
+      var action = (0, _actions.getUsers)(id);
+      dispatch(action);
     }
   };
 }
