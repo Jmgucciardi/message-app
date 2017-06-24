@@ -1,14 +1,38 @@
 import React from 'react';
+import glamorous from 'glamorous';
+
+
+const TextContainer = {
+  padding: '1px',
+  border: '1px solid lightblue',
+  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
+  backgroundColor: 'white',
+  transition: 'boxShadow 0.3s, border 0.3s',
+  borderstyle: 'solid',
+  overflowY: 'auto',
+  position: 'absolute',
+  width: '825px',
+  height: '350px',
+  top: 10,
+  right: '0%',
+  left: '4%',
+};
+
+const UserDivStyles = {
+  padding: '1px',
+  border: '1px solid lightblue',
+  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
+  backgroundColor: 'white',
+  transition: 'boxShadow 0.3s, border 0.3s',
+  color: 'limegreen',
+};
+
+const TextStyles = glamorous.text(TextContainer);
+const MessageDiv = glamorous.div(UserDivStyles);
+
 
 
 class GetMessages extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      visible: true,
-
-    };
-  }
 
   componentDidMount() {
     if (this.props.match) {
@@ -19,56 +43,30 @@ class GetMessages extends React.Component {
     }
   }
 
-
-
   render() {
+    this.props.loadMessages()
+    let userDivs = '';
 
-    this.props.loadMessages();
 
-    let buttonText = "Hide";
-    let userDivs = "";
-    if (this.state.visible) {
-      buttonText = "Hide";
-      userDivs = this.props.messages.map((d,i) => {
-        return (
-          <div key={i}>
-            <ul>
-              <li> {d.message} </li>
-
+    userDivs = this.props.messages.map((d,i) => {
+      return (
+        <MessageDiv key = {i}>
+          <div>
+              UserName: {d.message}
               <button onClick={() =>
                 this.props.deleteMessages(`${d._id}`)}>
                 Remove
               </button>
-            </ul>
           </div>
-        );
-      });
-    } else {
-      buttonText = "Show";
-      userDivs = "";
-    }
+          </MessageDiv>
+
+      );
+    });
+
     return (
-  <div className="messageContainer" id="MC"
-      style={{
-        borderstyle: 'solid',
-        overflow: 'auto',
-        position: 'absolute',
-        width: '500px',
-        height: '250px',
-        top: '20px',
-        right: '75%',
-        left: '50%',
-      }}>
-    <button onClick={() => {
-      this.setState({
-        visible: !this.state.visible
-      });
-    }
-    }>
-      {buttonText}
-    </button>
-    {userDivs}
-  </div>
+  <TextStyles>
+      {userDivs}
+  </TextStyles>
     );
   }
 }
