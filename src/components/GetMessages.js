@@ -10,6 +10,8 @@ const TextContainer = {
   transition: 'boxShadow 0.3s, border 0.3s',
   borderstyle: 'solid',
   overflowY: 'auto',
+  oveflowWrap: 'breakWord',
+  flex: 0.8,
   position: 'absolute',
   width: '825px',
   height: '350px',
@@ -24,6 +26,10 @@ const UserDivStyles = {
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   backgroundColor: 'white',
   transition: 'boxShadow 0.3s, border 0.3s',
+  overfloWrap: 'breakWord',
+  wordWrap: 'breakWord',
+  hyphens: 'auto'
+
 
 };
 
@@ -49,13 +55,14 @@ class GetMessages extends React.Component {
       return (
         <MessageDiv key = {i}>
           <div>
-              UserName: {d.message}
-            
+               {d.message}
+
           </div>
           </MessageDiv>
       );
     });
     return (
+
   <TextStyles>
     {userDivs}
   </TextStyles>

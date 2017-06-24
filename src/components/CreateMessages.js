@@ -44,18 +44,9 @@ class CreateMessages extends React.Component {
       messages: {
         message: ''
       },
-      users: {
-        username: ''
-      }
     };
   }
 
-  componentDidMount() {
-    if (this.props.match) {
-      const id = this.props.match.params.id;
-      this.props.getUsers(id);
-    }
-  }
 
   render() {
 
@@ -69,7 +60,7 @@ class CreateMessages extends React.Component {
           }
         }}>
           <Basic>
-            UserName:
+            Guest:
              <TextInput onChange={ e => {
                const messages = {message: e.target.value};
                this.setState({

@@ -46,6 +46,8 @@ var TextContainer = {
   transition: 'boxShadow 0.3s, border 0.3s',
   borderstyle: 'solid',
   overflowY: 'auto',
+  oveflowWrap: 'breakWord',
+  flex: 0.8,
   position: 'absolute',
   width: '825px',
   height: '350px',
@@ -59,7 +61,10 @@ var UserDivStyles = {
   border: '1px solid lightblue',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   backgroundColor: 'white',
-  transition: 'boxShadow 0.3s, border 0.3s'
+  transition: 'boxShadow 0.3s, border 0.3s',
+  overfloWrap: 'breakWord',
+  wordWrap: 'breakWord',
+  hyphens: 'auto'
 
 };
 
@@ -92,19 +97,19 @@ var GetMessages = function (_React$Component) {
       userDivs = this.props.messages.map(function (d, i) {
         return _react2.default.createElement(MessageDiv, { key: i, __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 56
           }
         }, _react2.default.createElement('div', {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 51
+            lineNumber: 57
           }
-        }, 'UserName: ', d.message));
+        }, d.message));
       });
       return _react2.default.createElement(TextStyles, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 66
         }
       }, userDivs);
     }

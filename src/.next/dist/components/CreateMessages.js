@@ -90,23 +90,12 @@ var CreateMessages = function (_React$Component) {
     _this.state = {
       messages: {
         message: ''
-      },
-      users: {
-        username: ''
       }
     };
     return _this;
   }
 
   (0, _createClass3.default)(CreateMessages, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (this.props.match) {
-        var id = this.props.match.params.id;
-        this.props.getUsers(id);
-      }
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -114,12 +103,12 @@ var CreateMessages = function (_React$Component) {
       return _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 54
         }
       }, _react2.default.createElement('div', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 55
         }
       }, _react2.default.createElement('form', { onSubmit: function onSubmit(e) {
           e.preventDefault();
@@ -128,26 +117,26 @@ var CreateMessages = function (_React$Component) {
           }
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 56
         }
       }, _react2.default.createElement(Basic, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 62
         }
-      }, 'UserName:', _react2.default.createElement(TextInput, { onChange: function onChange(e) {
+      }, 'Guest:', _react2.default.createElement(TextInput, { onChange: function onChange(e) {
           var messages = { message: e.target.value };
           _this2.setState({
             messages: (0, _assign2.default)(_this2.state.messages, messages)
           });
         }, __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 64
         }
       }), _react2.default.createElement(ButtonMessageSubmit, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 70
         }
       }, 'Submit')))));
     }
