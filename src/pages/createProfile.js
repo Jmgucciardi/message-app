@@ -11,10 +11,13 @@ function usersPage() {
   return (
 
     <div>
-  
+
       <Link href="/">
         <a>Back to home</a>
       </Link>
+      <p><Link href="/messages">
+      <a>To Message Board</a>
+    </Link></p>
       <CreateUsersContainer />
       <GetUsersContainer />
 

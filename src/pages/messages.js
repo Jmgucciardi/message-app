@@ -13,7 +13,7 @@ function messagesPage() {
 
     <div>
       <CreateMessagesContainer />
-      < GetMessagesContainer/>
+      <GetMessagesContainer/>
     </div>
   );
 }

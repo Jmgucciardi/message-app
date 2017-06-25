@@ -25,7 +25,7 @@ function indexPage() {
         window.open('https://github.com/Jmgucciardi/message-app');}}>GitHub</a>
 
       </p>
-        <p><Link href="/CreateProfile">
+        <p><Link href="/createProfile">
         <a>Users</a>
       </Link></p>
       <p><Link href="/messages">

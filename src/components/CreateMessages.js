@@ -1,6 +1,5 @@
 import React from 'react';
 import glamorous from 'glamorous';
-import { css } from 'glamor';
 
 const basicStyles = {
   textAlign: 'left',
@@ -18,6 +17,7 @@ const basicStyles = {
 };
 
 const TextContainer = {
+  fontSize: '75%',
   padding: '1px',
   border: '1px solid lightblue',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
@@ -30,7 +30,7 @@ const ButtonSubmit = {
   position: 'absolute',
   bottom: '0%',
   right: '10%',
-  left: '17%',
+  left: '10%',
 };
 
 const Basic = glamorous.div(basicStyles);

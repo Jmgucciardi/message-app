@@ -2,8 +2,6 @@ import next from 'next';
 import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
-import AuthenticationRoutes from './routers/authenticationRoutes';
-import userLoginRoutes from './routers/userLoginRoutes';
 import bodyParser from 'body-parser';
 import MessagesRoutes from './routers/messagesRoutes';
 import UserRoutes from './routers/usersRoutes';
@@ -32,8 +30,6 @@ nextApp.prepare().then(() => {
   const app = express();
 
   app.use(bodyParser.json())
-  .use(AuthenticationRoutes)
-  .use(userLoginRoutes)
   .use(MessagesRoutes)
   .use(UserRoutes);
 

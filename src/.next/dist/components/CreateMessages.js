@@ -38,8 +38,6 @@ var _glamorous = require('glamorous');
 
 var _glamorous2 = _interopRequireDefault(_glamorous);
 
-var _glamor = require('glamor');
-
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }
@@ -60,6 +58,7 @@ var basicStyles = {
 };
 
 var TextContainer = {
+  fontSize: '75%',
   padding: '1px',
   border: '1px solid lightblue',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
@@ -72,7 +71,7 @@ var ButtonSubmit = {
   position: 'absolute',
   bottom: '0%',
   right: '10%',
-  left: '17%'
+  left: '10%'
 };
 
 var Basic = _glamorous2.default.div(basicStyles);

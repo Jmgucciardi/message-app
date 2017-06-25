@@ -17,6 +17,8 @@ exports.getUsers = getUsers;
 exports.deleteMessages = deleteMessages;
 exports.deleteUsers = deleteUsers;
 
+require('whatwg-fetch');
+
 function _interopRequireDefault(obj) {
   return obj && obj.__esModule ? obj : { default: obj };
 }

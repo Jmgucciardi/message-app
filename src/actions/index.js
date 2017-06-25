@@ -1,3 +1,5 @@
+import 'whatwg-fetch';
+
 function loadMessageError(message) {
   return {
     type: 'MESSAGE_LOAD_ERROR',
