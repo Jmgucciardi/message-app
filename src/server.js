@@ -1,8 +1,10 @@
 import next from 'next';
 import path from 'path';
 import express from 'express';
-import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import AuthenticationRoutes from './routers/authenticationRoutes';
+import userLoginRoutes from './routers/userLoginRoutes';
+import bodyParser from 'body-parser';
 import MessagesRoutes from './routers/messagesRoutes';
 import UserRoutes from './routers/usersRoutes';
 
@@ -14,6 +16,13 @@ const nextApp = next({
   dir: path.resolve(__dirname)
 });
 
+const db = mongoose.connection;
+
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function () {
+  console.log('connection confimed');
+});
+
 
 const handle = nextApp.getRequestHandler();
 
@@ -23,6 +32,8 @@ nextApp.prepare().then(() => {
   const app = express();
 
   app.use(bodyParser.json())
+  .use(AuthenticationRoutes)
+  .use(userLoginRoutes)
   .use(MessagesRoutes)
   .use(UserRoutes);
 
