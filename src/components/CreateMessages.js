@@ -1,42 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
-
-
-const basicStyles = {
-  textAlign: 'left',
-  backgroundColor: 'white',
-  color: 'cornflowerblue',
-  border: '1px solid lightblue',
-  borderRight: 'none',
-  borderBottom: 'none',
-  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
-  transition: 'all 0.1s linear',
-  margin: `3rem 0`,
-  padding: `1rem 0.5rem`,
-  position: 'absolute',
-  bottom: 0
-};
-
-const TextContainer = {
-  fontSize: '75%',
-  padding: '1px',
-  border: '1px solid lightblue',
-  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
-  transition: 'boxShadow 0.3s, border 0.3s',
-  width: '700px',
-  height: '100px',
-};
-
-const ButtonSubmit = {
-  position: 'absolute',
-  bottom: '0%',
-  right: '10%',
-  left: '10%',
-};
-
-const Basic = glamorous.div(basicStyles);
-const TextInput = glamorous.textArea(TextContainer);
-const ButtonMessageSubmit = glamorous.button(ButtonSubmit);
+import MessageStyles from './stylesheets/messageStyles';
 
 class CreateMessages extends React.Component {
   constructor() {
@@ -69,21 +32,19 @@ class CreateMessages extends React.Component {
             this.props.createMessages(this.state.messages);
           }
         }}>
-          <Basic>
+          <MessageStyles.Basic>
             Guest:
-             <TextInput onChange={ e => {
+             <MessageStyles.TextInput onChange={ e => {
                const messages = {message: e.target.value};
                this.setState({
                  messages: Object.assign(this.state.messages,messages)
                });
-               console.log('text input', TextInput)
-               
-             }}/>
-             <ButtonMessageSubmit>
-             Submit
-             </ButtonMessageSubmit>
-          </Basic>
 
+             }}/>
+             <MessageStyles.ButtonMessageSubmit>
+             Submit
+             </MessageStyles.ButtonMessageSubmit>
+          </MessageStyles.Basic>
         </form>
       </div>
     </div>
