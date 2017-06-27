@@ -1,6 +1,5 @@
 import glamorous from 'glamorous';
 
-
 const basicStyles = {
   textAlign: 'left',
   backgroundColor: 'white',
@@ -63,12 +62,20 @@ const UserDivStyles = {
 
 };
 
+const HomeLink = {
+  position: 'absolute',
+  bottom: '2%',
+  right: '50%',
+
+};
+
 const MessageStyles = {
   Basic: glamorous.div(basicStyles),
   TextInput: glamorous.textArea(TextContainer),
   ButtonMessageSubmit: glamorous.button(ButtonSubmit),
   MessageDiv: glamorous.div(UserDivStyles),
-  TextStyles: glamorous.text(OutputContainer)
+  TextStyles: glamorous.text(OutputContainer),
+  Link: glamorous.div(HomeLink)
 };
 
 export default MessageStyles;

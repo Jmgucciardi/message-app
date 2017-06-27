@@ -1,35 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
-
-const basicStyles = {
-  textAlign: 'left',
-  backgroundColor: 'white',
-  color: 'cornflowerblue',
-  border: '1px solid lightblue',
-  borderRight: 'none',
-  borderBottom: 'none',
-  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
-  transition: 'all 0.1s linear',
-  margin: `3rem 0`,
-  padding: `1rem 0.5rem`,
-  position: 'absolute',
-  bottom: 0
-};
-
-const hoverStyles = {
-  ':hover': {
-    color: 'white',
-    backgroundColor: 'lightgray',
-    borderColor: 'aqua',
-    boxShadow: `-15px -15px 0 0 aqua, -30px -30px 0 0 cornflowerblue`
-  },
-  '& code': {
-    backgroundColor: 'linen'
-  }
-};
-
-const Basic = glamorous.div(basicStyles);
-const Combined = glamorous.div(basicStyles, hoverStyles)
+import styles from './stylesheets/createUserStyles';
 
 class CreateUsers extends React.Component {
   constructor() {
@@ -50,7 +20,7 @@ class CreateUsers extends React.Component {
 
   render() {
     return (
-      <Basic>
+      <styles.Basic>
       <div>
         <h1>Create Profile</h1>
         <form onSubmit={ e => {
@@ -120,7 +90,7 @@ class CreateUsers extends React.Component {
           </button>
         </form>
       </div>
-    </Basic>
+    </styles.Basic>
 
     );
   }

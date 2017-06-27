@@ -1,6 +1,6 @@
 import React from 'react';
 import MessageStyles from './stylesheets/messageStyles';
-
+import Link from 'next/link';
 class CreateMessages extends React.Component {
   constructor() {
     super();
@@ -45,6 +45,11 @@ class CreateMessages extends React.Component {
              Submit
              </MessageStyles.ButtonMessageSubmit>
           </MessageStyles.Basic>
+          <MessageStyles.Link>
+          <Link href="/">
+            <a>Back to home</a>
+          </Link>
+          </MessageStyles.Link>
         </form>
       </div>
     </div>

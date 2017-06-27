@@ -3,7 +3,6 @@ import React from 'react';
 import withRedux from 'next-redux-wrapper';
 import CreateMessagesContainer from '../containers/CreateMessagesContainer';
 import GetMessagesContainer from '../containers/GetMessagesContainer';
-
 import {initStore} from '../store';
 
 
