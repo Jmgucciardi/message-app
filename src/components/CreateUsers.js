@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import glamorous from 'glamorous';
 
 const basicStyles = {
@@ -51,7 +50,6 @@ class CreateUsers extends React.Component {
 
   render() {
     return (
-
       <Basic>
       <div>
         <h1>Create Profile</h1>

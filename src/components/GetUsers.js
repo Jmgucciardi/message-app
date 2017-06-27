@@ -37,7 +37,7 @@ const hoverStyles = {
 const Combined = glamorous.div(basicStyles, hoverStyles);
 
 
-class GetMessages extends React.Component {
+class GetUsers extends React.Component {
 
   componentDidMount() {
     if (this.props.match) {
@@ -50,11 +50,12 @@ class GetMessages extends React.Component {
 
   render() {
 
-    this.props.loadUsers()
+    this.props.loadUsers();
     let userDivs = '';
     userDivs = this.props.users.map((d,i) => {
       return (
         <Combined key = {i}>
+        <div>
           <div>
 
              {d.firstname} <br />
@@ -73,6 +74,7 @@ class GetMessages extends React.Component {
           <p><Link href="/messages" >
           <a>Go To Message Page</a>
         </Link></p>
+          </div>
         </Combined>
       );
     });
@@ -84,4 +86,4 @@ class GetMessages extends React.Component {
   }
 }
 
-export default GetMessages;
+export default GetUsers;

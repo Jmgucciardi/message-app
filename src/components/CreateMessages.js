@@ -1,6 +1,7 @@
 import React from 'react';
 import glamorous from 'glamorous';
 
+
 const basicStyles = {
   textAlign: 'left',
   backgroundColor: 'white',
@@ -44,9 +45,18 @@ class CreateMessages extends React.Component {
       messages: {
         message: ''
       },
+      users: {
+        username: ''
+      },
     };
   }
-
+  componentDidMount() {
+    if (this.props.match) {
+      const id = this.props.match.params.id;
+      this.props.getUsers(id);
+      this.props.loadUsers();
+    }
+  }
 
   render() {
 
@@ -66,6 +76,8 @@ class CreateMessages extends React.Component {
                this.setState({
                  messages: Object.assign(this.state.messages,messages)
                });
+               console.log('text input', TextInput)
+               
              }}/>
              <ButtonMessageSubmit>
              Submit
