@@ -1,41 +1,5 @@
 import React from 'react';
-import glamorous from 'glamorous';
-
-
-const TextContainer = {
-  padding: '1px',
-  border: '1px solid lightblue',
-  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
-  backgroundColor: 'white',
-  transition: 'boxShadow 0.3s, border 0.3s',
-  borderstyle: 'solid',
-  overflowY: 'auto',
-  oveflowWrap: 'breakWord',
-  flex: 0.8,
-  position: 'absolute',
-  width: '825px',
-  height: '350px',
-  top: 10,
-  right: '0%',
-  left: '4%',
-};
-
-const UserDivStyles = {
-  padding: '1px',
-  border: '1px solid lightblue',
-  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
-  backgroundColor: 'white',
-  transition: 'boxShadow 0.3s, border 0.3s',
-  overfloWrap: 'breakWord',
-  wordWrap: 'breakWord',
-  hyphens: 'auto'
-
-
-};
-
-const TextStyles = glamorous.text(TextContainer);
-const MessageDiv = glamorous.div(UserDivStyles);
-
+import MessageStyles from './stylesheets/messageStyles';
 
 class GetMessages extends React.Component {
 
@@ -53,19 +17,19 @@ class GetMessages extends React.Component {
     let userDivs = '';
     userDivs = this.props.messages.map((d,i) => {
       return (
-        <MessageDiv key = {i}>
+        <MessageStyles.MessageDiv key = {i}>
           <div>
                {d.message}
 
           </div>
-          </MessageDiv>
+          </MessageStyles.MessageDiv>
       );
     });
     return (
 
-  <TextStyles>
+  <MessageStyles.TextStyles>
     {userDivs}
-  </TextStyles>
+  </MessageStyles.TextStyles>
     );
   }
 }
