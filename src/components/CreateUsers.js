@@ -30,44 +30,54 @@ class CreateUsers extends React.Component {
           }
         }}>
           <div>
+          <p>
             Lastname: <input onChange={ e => {
               const users = {lastname: e.target.value};
               this.setState({
                 users: Object.assign(this.state.users,users)
               });
             }}/>
+            </p>
           </div>
           <div>
+          <p>
             Firstname: <input onChange={ e => {
               const users = {firstname: e.target.value};
               this.setState({
                 users: Object.assign(this.state.users,users)
               });
             }} />
+            </p>
           </div>
         <div>
+        <p>
             Avatar: <input onChange={ e => {
               const users = {avatar: e.target.value};
               this.setState({
                 users: Object.assign(this.state.users,users)
               });
             }} />
+            </p>
           </div>
           <div>
+          <p>
             Address: <input onChange={ e => {
               const users = {address: e.target.value};
               this.setState({
                 users: Object.assign(this.state.users,users)
               });
             }} />
+            </p>
           </div>
         <div>
+        <p>
             Phonenumber: <input onChange={ e => {
               const users = {phonenumber: e.target.value};
               this.setState({
                 users: Object.assign(this.state.users,users)
               });
             }} />
+            </p>
           </div>
           <div>
             Hobbies: <input onChange={ e => {
@@ -78,12 +88,14 @@ class CreateUsers extends React.Component {
             }} />
           </div>
         <div>
-            <p>Username: <input onChange={ e => {
+            <p>
+            Username: <input onChange={ e => {
               const users = {username: e.target.value};
               this.setState({
                 users: Object.assign(this.state.users,users)
               });
-            }} /></p>
+            }} />
+            </p>
           </div>
           <button>
             Create

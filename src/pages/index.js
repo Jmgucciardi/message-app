@@ -5,6 +5,7 @@ import {initStore} from '../store';
 // import TopNavBar from './components/TopNavbar';
 import styles from '../components/stylesheets/indexStyles';
 
+
 function indexPage() {
   return (
     <div>
@@ -13,10 +14,10 @@ function indexPage() {
           <styles.Padding>
 
           <a href="https://github.com/Jmgucciardi/message-app"
-            target="_blank" onClick={event => {
-            event.preventDefault();
-            window.open('https://github.com/Jmgucciardi/message-app');
-            }}>
+                target="_blank" onClick={event => {
+                  event.preventDefault();
+                  window.open('https://github.com/Jmgucciardi/message-app');
+                }}>
             GitHub </a>
           </styles.Padding>
 
@@ -27,12 +28,15 @@ function indexPage() {
           </styles.Padding>
 
           <styles.Padding>
+
           <Link href="/messages">
           <a> Messages </a>
           </Link>
+
           </styles.Padding>
-          
+
         </styles.Basic>
+
     </div>
   );
 }

@@ -12,7 +12,7 @@ const basicStyles = {
   margin: `3rem 0`,
   padding: `1rem 0.5rem`,
   position: 'absolute',
-  bottom: 0
+  bottom: '30%'
 };
 
 const hoverStyles = {
