@@ -13,7 +13,7 @@ const basicStyles = {
   padding: `1rem 0.5rem`,
   position: 'absolute',
   bottom: 0,
-  left: '10%'
+  left: '10%',
 };
 
 const TextContainer = {
@@ -28,21 +28,35 @@ const TextContainer = {
 
 const ButtonSubmit = {
   position: 'absolute',
-  bottom: '0%',
-  right: '10%',
-  left: '10%',
+  left: '5px',
+  bottom: '0px'
+};
+
+const Remove = {
+  border: '1px solid lightblue',
+  backgroundColor: 'white',
+  color: 'orange',
+  borderRight: 'none',
+  borderBottom: 'none',
+  boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
+  fontSize: '125%',
+  cursor: 'pointer',
+  wordWrap: 'breakWord',
+  hyphens: 'auto',
+  textAlign: 'left',
 };
 
 const OutputContainer = {
+  textAlign: 'left',
   padding: '1px',
   border: '1px solid lightblue',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   backgroundColor: 'white',
   transition: 'boxShadow 0.3s, border 0.3s',
   borderstyle: 'solid',
-  overflowY: 'auto',
-  oveflowWrap: 'breakWord',
-  flex: 0.8,
+  overfloWrap: 'breakWord',
+  wordWrap: 'breakWord',
+  hyphens: 'auto',
   position: 'absolute',
   width: '825px',
   height: '350px',
@@ -70,13 +84,14 @@ const HomeLink = {
 
 };
 
-const MessageStyles = {
+const Styles = {
   Basic: glamorous.div(basicStyles),
   TextInput: glamorous.input(TextContainer),
   ButtonMessageSubmit: glamorous.button(ButtonSubmit),
   MessageDiv: glamorous.div(UserDivStyles),
   TextStyles: glamorous.text(OutputContainer),
-  Link: glamorous.div(HomeLink)
+  Link: glamorous.div(HomeLink),
+  GetButton: glamorous.button(Remove)
 };
 
-export default MessageStyles;
+export default Styles;

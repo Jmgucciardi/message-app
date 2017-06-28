@@ -1,5 +1,5 @@
 import React from 'react';
-import MessageStyles from './stylesheets/messageStyles';
+import Styles from './stylesheets/messageStyles';
 import Link from 'next/link';
 
 class CreateMessages extends React.Component {
@@ -23,7 +23,6 @@ class CreateMessages extends React.Component {
   }
 
   render() {
-
     return (
       <div>
       <div>
@@ -33,25 +32,25 @@ class CreateMessages extends React.Component {
             this.props.createMessages(this.state.messages);
           }
         }}>
-          <MessageStyles.Basic>
+          <Styles.Basic>
             Guest:
-             <MessageStyles.TextInput onChange={ e => {
-               const messages = {message: e.target.value};
-               this.setState({
-                 messages: Object.assign(this.state.messages,messages)
-               });
-
-             }}/>
-             <MessageStyles.ButtonMessageSubmit>
+             <Styles.TextInput value={this.state.message}
+              onChange={ e => {
+                const messages = {message: e.target.value};
+                this.setState({
+                  messages: Object.assign(this.state.messages,messages),
+                });
+              }}/>
+             <Styles.ButtonMessageSubmit>
              Submit
-             </MessageStyles.ButtonMessageSubmit>
-          </MessageStyles.Basic>
-          <MessageStyles.Link>
+             </Styles.ButtonMessageSubmit>
+          </Styles.Basic>
+          <Styles.Link>
           <Link href="/">
             <a>Back to home</a>
           </Link>
-          </MessageStyles.Link>
-        </form>
+          </Styles.Link>
+        </form >
       </div>
     </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import MessageStyles from './stylesheets/messageStyles';
+import Styles from './stylesheets/messageStyles';
 
 class GetMessages extends React.Component {
 
@@ -17,19 +17,21 @@ class GetMessages extends React.Component {
     let userDivs = '';
     userDivs = this.props.messages.map((d,i) => {
       return (
-        <MessageStyles.MessageDiv key = {i}>
+        <div key = {i}>
           <div>
-               {d.message}
-
+            <br/>
+               <Styles.GetButton onClick={() =>
+                 this.props.deleteMessages(`${d._id}`)}>
+                 {d.message}
+               </Styles.GetButton>
           </div>
-          </MessageStyles.MessageDiv>
+        </div>
       );
     });
     return (
-
-  <MessageStyles.TextStyles>
-    {userDivs}
-  </MessageStyles.TextStyles>
+      <Styles.TextStyles>
+        {userDivs}
+      </Styles.TextStyles>
     );
   }
 }
