@@ -23,24 +23,34 @@ class CreateMessages extends React.Component {
   }
 
   render() {
+    const userTip = '* click on any message to remove';
     return (
-      <div>
+    <div>
       <div>
         <form onSubmit={ e => {
           e.preventDefault();
           if (this.props.createMessages) {
             this.props.createMessages(this.state.messages);
           }
+          console.log(this.state.message);
+            const messages = {message: ''};
+            this.setState({
+              messages: Object.assign(this.state.messages,messages),
+            });
+
         }}>
           <Styles.Basic>
-            Guest:
-             <Styles.TextInput value={this.state.message}
+          {userTip}
+  <br/>Guest:
+             <Styles.TextInput value= {this.state.message}
+
               onChange={ e => {
                 const messages = {message: e.target.value};
                 this.setState({
                   messages: Object.assign(this.state.messages,messages),
                 });
               }}/>
+
              <Styles.ButtonMessageSubmit>
              Submit
              </Styles.ButtonMessageSubmit>
