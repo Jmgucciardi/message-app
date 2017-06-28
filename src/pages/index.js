@@ -5,7 +5,6 @@ import {initStore} from '../store';
 // import TopNavBar from './components/TopNavbar';
 import styles from '../components/stylesheets/indexStyles';
 
-
 function indexPage() {
   return (
     <div>
@@ -32,11 +31,8 @@ function indexPage() {
           <Link href="/messages">
           <a> Messages </a>
           </Link>
-
           </styles.Padding>
-
         </styles.Basic>
-
     </div>
   );
 }

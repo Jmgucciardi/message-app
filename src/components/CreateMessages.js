@@ -1,6 +1,7 @@
 import React from 'react';
 import MessageStyles from './stylesheets/messageStyles';
 import Link from 'next/link';
+
 class CreateMessages extends React.Component {
   constructor() {
     super();

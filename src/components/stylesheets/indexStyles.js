@@ -1,7 +1,5 @@
 import glamorous from 'glamorous';
 
-
-
 const basicStyles = {
   textAlign: 'left',
   backgroundColor: 'white',

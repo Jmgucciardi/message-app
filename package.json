@@ -40,6 +40,7 @@
     "redux": "^3.6.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
+    "styled-jsx": "^1.0.7",
     "url-loader": "^0.5.9",
     "whatwg-fetch": "^2.0.3"
   },

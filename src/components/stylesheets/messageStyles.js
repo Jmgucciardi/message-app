@@ -9,20 +9,21 @@ const basicStyles = {
   borderBottom: 'none',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   transition: 'all 0.1s linear',
-  margin: `3rem 0`,
+  margin: `5rem 0`,
   padding: `1rem 0.5rem`,
   position: 'absolute',
-  bottom: 0
+  bottom: 0,
+  left: '10%'
 };
 
 const TextContainer = {
-  fontSize: '75%',
-  padding: '1px',
+  fontSize: '100%',
+  padding: '5px',
   border: '1px solid lightblue',
   boxShadow: '5px 5px 0 0 lightblue, 10px 10px 0 0 lightyellow',
   transition: 'boxShadow 0.3s, border 0.3s',
   width: '700px',
-  height: '100px',
+  height: '50px',
 };
 
 const ButtonSubmit = {
@@ -47,7 +48,7 @@ const OutputContainer = {
   height: '350px',
   top: 10,
   right: '0%',
-  left: '4%',
+  left: '10%',
 };
 
 const UserDivStyles = {
@@ -71,7 +72,7 @@ const HomeLink = {
 
 const MessageStyles = {
   Basic: glamorous.div(basicStyles),
-  TextInput: glamorous.textArea(TextContainer),
+  TextInput: glamorous.input(TextContainer),
   ButtonMessageSubmit: glamorous.button(ButtonSubmit),
   MessageDiv: glamorous.div(UserDivStyles),
   TextStyles: glamorous.text(OutputContainer),
