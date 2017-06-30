@@ -5,6 +5,19 @@
   conclusion, where will it go
 */
 
+/*
+ * by using nextjs we are able to wrap the state and the store together on the page
+ * this makes routing and the state much easier to manage. Simply create your store
+ * (See store.js for simple example here) and pass the store onto each page as a
+ * component, {initStore},. Using next-redux-wrapper allows us to package the state,
+ * the store (I.E the actions) on a page by page bases rather than in one location
+ * such as index.js, containing appContainer containing app.js. With Redux-wrapper
+ * you pass three values, the store, and the props. Props is usually handled in
+ * your components and wrapped in containers, but it is possible to pass actions
+ * here and pass those props through the wrapper . If no props are being passed
+ * assign the values null to the remaining two arguments.
+ */
+
 import React from 'react';
 import Link from 'next/link';
 import withRedux from 'next-redux-wrapper';
@@ -21,7 +34,9 @@ function indexPage() {
       <styles.Header>React</styles.Header>
         <styles.Basic>
           <styles.Padding>
-
+          // this link will open a new tab for the user, redirecting them to the
+          // github page for this application
+          //Links are easy and clean with next/link, 
           <a href="https://github.com/Jmgucciardi/message-app"
                 target="_blank" onClick={event => {
                   event.preventDefault();

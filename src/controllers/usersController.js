@@ -1,3 +1,8 @@
+/*
+  Here is where the heavy lifting for the backend will take place. I create all
+  the methods for interacting with the data on the back end here.
+*/
+
 import UsersModel from '../models/usersModel';
 
 export function list(req, res, next) {

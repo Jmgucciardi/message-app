@@ -1,9 +1,15 @@
+/*
+  Component designed to allow the user ot input some personal information about
+  them, early phases of what will be a profile page setup
+*/
+
 import React from 'react';
 import styles from './stylesheets/createUserStyles';
 
 class CreateUsers extends React.Component {
   constructor() {
     super();
+    // initilize the state of key value pairs of the object users
     this.state = {
       users: {
         lastname: '',
@@ -18,13 +24,14 @@ class CreateUsers extends React.Component {
     };
   }
 
-
-
   render() {
     return (
       <styles.Basic>
       <div>
         <h1>Create Profile</h1>
+        // on submit we will first check for a truthy value for the state of
+        // users, prevent the page from refreshing and then pass the value of
+        // this.state.users through the createUsers action
         <form onSubmit={ e => {
           e.preventDefault();
           if (this.props.createUsers) {
@@ -33,6 +40,10 @@ class CreateUsers extends React.Component {
         }}>
           <div>
           <p>
+          // each input field is designed to handle the state of each key value
+          // pair the same. take the value of the input feild as it changes and
+          // assisn that value to users with e.target.value and assign that
+          // valueto the object users
             Lastname: <input onChange={ e => {
               const users = {lastname: e.target.value};
               this.setState({

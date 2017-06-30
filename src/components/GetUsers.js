@@ -1,3 +1,10 @@
+/*
+  Get Users component will handle the async calls to the db and gather the
+  user profile information. This component will work along side the authenticate
+  data and allow users to round their own personal profiles out with unique
+  personal traits
+*/
+
 import React from 'react';
 import Link from 'next/link';
 import styles from './stylesheets/createUserStyles';
@@ -5,6 +12,8 @@ import styles from './stylesheets/createUserStyles';
 
 class GetUsers extends React.Component {
 
+// mount all required actions <> if statement used for turth value, testing
+// for an undefined .
   componentDidMount() {
     if (this.props.match) {
       const id = this.props.match.params.id;
@@ -13,11 +22,14 @@ class GetUsers extends React.Component {
       this.props.loadUsers();
     }
   }
-
+// team unicorn forever and always <> comment supplied by my wife,
+// Gabrielle Aufiero. Pls contact me via github if you have any questions
+// regarding team unicorn <> I'll save you some time, I don't know.
   render() {
 
-    this.props.loadUsers();
     let userDivs = '';
+    // as in get messages, map over the object of users and out put the data found
+    // in each key value pair, storing the values in the local variable, userDivs
     userDivs = this.props.users.map((d,i) => {
       return (
         <styles.GetCombined key = {i}>
@@ -32,6 +44,7 @@ class GetUsers extends React.Component {
              {d.username} <br />
              {d.hobbies} <br />
 
+             // remove the entire profile object from the page  
               <button onClick={() =>
                 this.props.deleteUsers(`${d._id}`)}>
                 REMOVE
