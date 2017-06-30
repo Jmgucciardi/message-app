@@ -15,7 +15,6 @@ class GetMessages extends React.Component {
   render() {
     this.props.loadMessages()
     let userDivs = '';
-    const userTip = '* click on any message to remove';
     userDivs = this.props.messages.map((d,i) => {
       return (
         <div key = {i}>

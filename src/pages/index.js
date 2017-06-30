@@ -1,3 +1,10 @@
+/*
+  Intro: who am I and my path to aca
+  Problem I decided to tackle with this project (inspiration)
+  Showoff the project itself (chalenges overcome)
+  conclusion, where will it go
+*/
+
 import React from 'react';
 import Link from 'next/link';
 import withRedux from 'next-redux-wrapper';
@@ -5,9 +12,12 @@ import {initStore} from '../store';
 // import TopNavBar from './components/TopNavbar';
 import styles from '../components/stylesheets/indexStyles';
 
+
+
 function indexPage() {
   return (
     <div>
+
       <styles.Header>React</styles.Header>
         <styles.Basic>
           <styles.Padding>
@@ -25,6 +35,11 @@ function indexPage() {
             <a> Create Profile </a>
           </Link>
           </styles.Padding>
+          <styles.Padding>
+          <Link href="/SignUpSignin">
+            <a> Signup / Signin </a>
+          </Link>
+          </styles.Padding>
 
           <styles.Padding>
 
@@ -35,6 +50,7 @@ function indexPage() {
         </styles.Basic>
     </div>
   );
+
 }
 
 export default withRedux(initStore, null, null)(indexPage);

@@ -3,8 +3,10 @@ import path from 'path';
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import passport from 'passport';
 import MessagesRoutes from './routers/messagesRoutes';
 import UserRoutes from './routers/usersRoutes';
+import authenticationRoutes from './routers/authenticationRoutes';
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Message-App');
@@ -31,13 +33,17 @@ nextApp.prepare().then(() => {
 
   app.use(bodyParser.json())
   .use(MessagesRoutes)
-  .use(UserRoutes);
+  .use(UserRoutes)
+  .use(authenticationRoutes);
 
 
 
   app.get('*', (request, response) => {
     return handle(request, response);
   });
+
+  const authStrategy = passport.authenticate('authStrategy', { session: false });
+  app.use(authStrategy);
 
   // eslint-disable-next-line
   app.use('*', (error, request, response, next) => {

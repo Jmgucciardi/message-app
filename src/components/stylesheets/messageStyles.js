@@ -44,6 +44,7 @@ const Remove = {
   wordWrap: 'breakWord',
   hyphens: 'auto',
   textAlign: 'left',
+  borderRadius: '30px 30px 30px 30px'
 };
 
 const OutputContainer = {

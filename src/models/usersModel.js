@@ -12,21 +12,21 @@ const schema = new mongoose.Schema({
     maxlength: [ 25, 'length limit' ]
   },
   avatar: {
-    required: true,
+    required: false,
     type: String,
     maxlength: [ 25, 'length limit' ]
   },
   phonenumber: {
-    required: true,
+    required: false,
     type: String,
     maxlength: [ 25, 'length limit' ]
   },
   address: {
-    required: true,
+    required: false,
     type: String,
   },
   hobbies: {
-    required: true,
+    required: false,
     type: String,
     maxlength: [ 150, 'length limit' ]
   },
@@ -35,6 +35,10 @@ const schema = new mongoose.Schema({
     unique: true,
     required: true,
     maxlength: [ 25, 'length limit' ]
+  },
+  password: {
+    type: String,
+    required: true
   }
 });
 

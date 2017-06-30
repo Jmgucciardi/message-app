@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import CreateMessages from '../components/CreateMessages';
 import {
   createMessages,
-  getUsers
+  getUsers,
+  loadUsers
 } from '../actions';
 
 function mapDispatchToProps(dispatch) {
@@ -12,6 +13,10 @@ function mapDispatchToProps(dispatch) {
     },
     getUsers: id => {
       const action = getUsers(id);
+      dispatch(action);
+    },
+    loadUsers: () => {
+      const action = loadUsers();
       dispatch(action);
     }
   };
