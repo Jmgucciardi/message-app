@@ -21,7 +21,7 @@ const padding = {
   padding: '75px',
   display: 'inline',
   marginRight: '1em',
-  fontSize: '50%',
+
 
 };
 

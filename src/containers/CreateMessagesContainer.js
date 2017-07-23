@@ -1,9 +1,3 @@
-/*
-  Note: With containers, I continue to use redux and employ the connect
-  method. Next.js is not needed here. The next redux wrapper will come in
-  later, on the physical pages we want to render.
-*/
-
 import { connect } from 'react-redux';
 import CreateMessages from '../components/CreateMessages';
 import {
