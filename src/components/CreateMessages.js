@@ -6,14 +6,14 @@ class CreateMessages extends React.Component {
   constructor() {
     super();
     this.state = {
+      inputValue: '',
       messages: {
         message: ''
-      },
+      }
     };
   }
 
   render() {
-
     const userTip = '* click on any message to remove';
     return (
     <div>
@@ -21,20 +21,25 @@ class CreateMessages extends React.Component {
 
         <form onSubmit={ e => {
           e.preventDefault();
+          this.setState({
+            inputValue: ''
+          });
           if (this.props.createMessages) {
             this.props.createMessages(this.state.messages);
           }
+
         }}>
           <Styles.Basic>
 
           {userTip}
 
         <br/>Guest:
-             <Styles.TextInput
+             <Styles.TextInput value = {this.state.inputValue}
                 onChange={ e => {
                   const messages = {message: e.target.value};
                   this.setState({
-                    messages: Object.assign(this.state.messages,messages),
+                    messages: Object.assign(this.state.messages, messages),
+                    inputValue: e.target.value
                   });
                 }}/>
 
