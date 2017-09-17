@@ -6,6 +6,13 @@ class CreateUsers extends React.Component {
     super();
 
     this.state = {
+      lastNameFieldValue: '',
+      firstNameFieldValue: '',
+      avatarFieldValue: '',
+      addressFieldValue: '',
+      phoneNumberFieldValue: '',
+      hobbiesFieldValue: '',
+      userNameFieldValue: '',
       users: {
         lastname: '',
         firstname: '',
@@ -27,6 +34,15 @@ class CreateUsers extends React.Component {
 
         <form onSubmit={ e => {
           e.preventDefault();
+          this.setState({
+            lastNameFieldValue: '',
+            firstNameFieldValue: '',
+            avatarFieldValue: '',
+            addressFieldValue: '',
+            phoneNumberFieldValue: '',
+            hobbiesFieldValue: '',
+            userNameFieldValue: '',
+          });
           if (this.props.createUsers) {
             this.props.createUsers(this.state.users);
           }
@@ -34,68 +50,82 @@ class CreateUsers extends React.Component {
           <div>
           <p>
 
-            Lastname: <input onChange={ e => {
-              const users = {lastname: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Lastname: <input value = {this.state.lastNameFieldValue}
+              onChange={ e => {
+                const users = {lastname: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  lastNameFieldValue: e.target.value
               });
             }}/>
             </p>
           </div>
           <div>
           <p>
-            Firstname: <input onChange={ e => {
-              const users = {firstname: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Firstname: <input value = {this.state.firstNameFieldValue}
+              onChange={ e => {
+                const users = {firstname: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  firstNameFieldValue: e.target.value
               });
             }} />
             </p>
           </div>
         <div>
         <p>
-            Avatar: <input onChange={ e => {
-              const users = {avatar: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Avatar: <input value = {this.state.avatarFieldValue}
+              onChange={ e => {
+                const users = {avatar: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  avatarFieldValue: e.target.value
               });
             }} />
             </p>
           </div>
           <div>
           <p>
-            Address: <input onChange={ e => {
-              const users = {address: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Address: <input value = {this.state.addressFieldValue}
+              onChange={ e => {
+                const users = {address: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  addressFieldValue: e.target.value
               });
             }} />
             </p>
           </div>
         <div>
         <p>
-            Phonenumber: <input onChange={ e => {
-              const users = {phonenumber: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Phonenumber: <input value = {this.state.phoneNumberFieldValue}
+              onChange={ e => {
+                const users = {phonenumber: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  phoneNumberFieldValue: e.target.value
               });
             }} />
             </p>
           </div>
           <div>
-            Hobbies: <input onChange={ e => {
-              const users = {hobbies: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Hobbies: <input value = {this.state.hobbiesFieldValue}
+               onChange={ e => {
+                const users = {hobbies: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  hobbiesFieldValue: e.target.value
               });
             }} />
           </div>
         <div>
             <p>
-            Username: <input onChange={ e => {
-              const users = {username: e.target.value};
-              this.setState({
-                users: Object.assign(this.state.users,users)
+            Username: <input value = {this.state.userNameFieldValue}
+              onChange={ e => {
+                const users = {username: e.target.value};
+                this.setState({
+                  users: Object.assign(this.state.users,users),
+                  userNameFieldValue: e.target.value
               });
             }} />
             </p>
