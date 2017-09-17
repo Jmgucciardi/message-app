@@ -49,7 +49,7 @@ class CreateMessages extends React.Component {
           </Styles.Basic>
           <Styles.Link>
 
-          <Link className="RouteToHome"href="/">
+          <Link className="RouteToHome" href="/">
             <a>Back to home</a>
           </Link>
           </Styles.Link>

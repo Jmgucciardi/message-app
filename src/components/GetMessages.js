@@ -22,10 +22,10 @@ class GetMessages extends React.Component {
     userDivs = this.props.messages.map((d,i) => {
       return (
 
-        <div key = {i}>
+        <div className="GenerateMessage"key = {i}>
           <div>
             <br/>
-               <Styles.GetButton onClick={() =>
+               <Styles.GetButton className="emoveeMessage" onClick={() =>
                  this.props.deleteMessages(`${d._id}`)}>
                  {d.message}
                </Styles.GetButton>
@@ -35,7 +35,7 @@ class GetMessages extends React.Component {
     });
     return (
 
-      <Styles.TextStyles>
+      <Styles.TextStyles className="ShowMessage">
         {userDivs}
       </Styles.TextStyles>
 
