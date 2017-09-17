@@ -1,11 +1,5 @@
 # message-app
 
-  Intro: who am I and my path to aca
-  Problem I decided to tackle with this project (inspiration)
-  Showoff the project itself (chalenges overcome)
-  conclusion, where will it go
-
-
 
   This application is a test for a full stack application using react.js, next.js
  and next redux wrapper. The state and store will be managed on the pages
