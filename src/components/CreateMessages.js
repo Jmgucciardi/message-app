@@ -34,7 +34,7 @@ class CreateMessages extends React.Component {
           {userTip}
 
         <br/>Guest:
-             <Styles.TextInput value = {this.state.inputValue}
+             <Styles.TextInput className="messageInput" value = {this.state.inputValue}
                 onChange={ e => {
                   const messages = {message: e.target.value};
                   this.setState({
@@ -43,13 +43,13 @@ class CreateMessages extends React.Component {
                   });
                 }}/>
 
-             <Styles.ButtonMessageSubmit>
+             <Styles.ButtonMessageSubmit className = "submitButton">
              Submit
              </Styles.ButtonMessageSubmit>
           </Styles.Basic>
           <Styles.Link>
 
-          <Link href="/">
+          <Link className="RouteToHome"href="/">
             <a>Back to home</a>
           </Link>
           </Styles.Link>
