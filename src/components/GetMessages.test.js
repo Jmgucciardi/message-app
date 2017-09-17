@@ -1,6 +1,11 @@
 import React from 'react';
 import {shallow, mount, render} from 'enzyme';
 
+/* 
+ * Unit testing for the get messages component, still in devlopment, checking to make sure the known elements
+ * are in fact there and returning true. 
+ */
+
 jest.dontMock('./GetMessages');
 
 

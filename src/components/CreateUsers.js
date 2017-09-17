@@ -23,7 +23,7 @@ class CreateUsers extends React.Component {
     return (
       <styles.Basic>
       <div>
-        <h1>Create Profile</h1>
+        <h1 className="ProfileHeader">Create Profile</h1>
 
         <form onSubmit={ e => {
           e.preventDefault();
