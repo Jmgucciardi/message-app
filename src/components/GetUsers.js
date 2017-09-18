@@ -16,7 +16,7 @@ class GetUsers extends React.Component {
   }
 
   render() {
-
+    this.props.loadUsers();
     let userDivs = '';
 
     userDivs = this.props.users.map((d,i) => {
@@ -30,8 +30,8 @@ class GetUsers extends React.Component {
              {d.avatar} <br />
              {d.address} <br />
              {d.phonenumber} <br />
-             {d.username} <br />
              {d.hobbies} <br />
+             {d.username} <br />
 
 
               <button onClick={() =>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './stylesheets/messageStyles';
+import PropTypes from 'prop-types';
 
 class GetMessages extends React.Component {
 
@@ -42,5 +43,13 @@ class GetMessages extends React.Component {
     );
   }
 }
+
+GetMessages.propTypes = {
+  getMessages: PropTypes.func.isRequired,
+  deleteMessages: PropTypes.func.isRequired,
+  loadMessages: PropTypes.func.isRequired,
+  messages: PropTypes.string.isRequired,
+  match: PropTypes.string.isRequired
+};
 
 export default GetMessages;

@@ -1,6 +1,7 @@
 import React from 'react';
 import Styles from './stylesheets/messageStyles';
 import Link from 'next/link';
+import PropTypes from 'prop-types';
 
 class CreateMessages extends React.Component {
   constructor() {
@@ -59,5 +60,9 @@ class CreateMessages extends React.Component {
     );
   }
 }
+
+CreateMessages.propTypes = {
+  createMessages: PropTypes.func.isRequired
+};
 
 export default CreateMessages;

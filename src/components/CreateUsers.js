@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './stylesheets/createUserStyles';
+import Proptypes from 'prop-types';
 
 class CreateUsers extends React.Component {
   constructor() {
@@ -26,7 +27,6 @@ class CreateUsers extends React.Component {
     };
   }
 
-
   render() {
     return (
       <styles.Basic>
@@ -46,19 +46,21 @@ class CreateUsers extends React.Component {
           });
           if (this.props.createUsers) {
             this.props.createUsers(this.state.users);
+          
           }
+
+
         }}>
           <div>
           <p>
-
              <input value = {this.state.lastNameFieldValue} placeholder = "Lastname..."
               onChange={ e => {
                 const users = {lastname: e.target.value};
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   lastNameFieldValue: e.target.value
-              });
-            }}/>
+                });
+              }}/>
             </p>
           </div>
           <div>
@@ -69,8 +71,8 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   firstNameFieldValue: e.target.value
-              });
-            }} />
+                });
+              }}/>
             </p>
           </div>
         <div>
@@ -81,8 +83,8 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   avatarFieldValue: e.target.value
-              });
-            }} />
+                });
+              }}/>
             </p>
           </div>
           <div>
@@ -93,8 +95,8 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   addressFieldValue: e.target.value
-              });
-            }} />
+                });
+              }}/>
             </p>
           </div>
         <div>
@@ -105,8 +107,8 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   phoneNumberFieldValue: e.target.value
-              });
-            }} />
+                });
+              }}/>
             </p>
           </div>
           <div>
@@ -116,8 +118,8 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   hobbiesFieldValue: e.target.value
-              });
-            }} />
+                });
+               }}/>
           </div>
         <div>
             <p>
@@ -127,8 +129,8 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   userNameFieldValue: e.target.value
-              });
-            }} />
+                });
+              }}/>
             </p>
           </div>
           <button>
@@ -140,5 +142,9 @@ class CreateUsers extends React.Component {
     );
   }
 }
+
+CreateUsers.propTypes = {
+  createUsers: Proptypes.func.isRequired
+};
 
 export default CreateUsers;
