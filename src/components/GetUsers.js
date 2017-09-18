@@ -25,8 +25,8 @@ class GetUsers extends React.Component {
         <div>
           <div>
 
-             {d.firstname} <br />
              {d.lastname} <br />
+             {d.firstname} <br />
              {d.avatar} <br />
              {d.address} <br />
              {d.phonenumber} <br />
@@ -39,9 +39,11 @@ class GetUsers extends React.Component {
                 REMOVE
               </button>
           </div>
-          <p><Link href="/messages" >
+          <p>
+          <Link href="/messages" >
           <a>Go To Message Page</a>
-        </Link></p>
+        </Link>
+        </p>
           </div>
         </styles.GetCombined>
       );

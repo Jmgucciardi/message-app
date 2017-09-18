@@ -29,6 +29,19 @@ class CreateUsers extends React.Component {
 
   render() {
     return (
+      <div>
+      <div>
+      <p>
+           <styles.AvatarInput value = {this.state.avatarFieldValue} placeholder = "Avatar..."
+            onChange={ e => {
+              const users = {avatar: e.target.value};
+              this.setState({
+                users: Object.assign(this.state.users,users),
+                avatarFieldValue: e.target.value
+              });
+            }}/>
+          </p>
+        </div>
       <styles.Basic>
       <div>
         <h1 className="ProfileHeader">Create Profile</h1>
@@ -68,18 +81,6 @@ class CreateUsers extends React.Component {
                 this.setState({
                   users: Object.assign(this.state.users,users),
                   firstNameFieldValue: e.target.value
-                });
-              }}/>
-            </p>
-          </div>
-        <div>
-        <p>
-             <input value = {this.state.avatarFieldValue} placeholder = "Avatar..."
-              onChange={ e => {
-                const users = {avatar: e.target.value};
-                this.setState({
-                  users: Object.assign(this.state.users,users),
-                  avatarFieldValue: e.target.value
                 });
               }}/>
             </p>
@@ -136,6 +137,7 @@ class CreateUsers extends React.Component {
         </form>
       </div>
     </styles.Basic>
+    </div>
     );
   }
 }
