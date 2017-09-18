@@ -38,6 +38,7 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
+    "react-draggable": "^3.0.3",
     "react-keydown": "^1.7.4",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.1",

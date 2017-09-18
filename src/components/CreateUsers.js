@@ -46,10 +46,7 @@ class CreateUsers extends React.Component {
           });
           if (this.props.createUsers) {
             this.props.createUsers(this.state.users);
-          
           }
-
-
         }}>
           <div>
           <p>
@@ -114,11 +111,11 @@ class CreateUsers extends React.Component {
           <div>
              <input value = {this.state.hobbiesFieldValue} placeholder = "Hobbies"
                onChange={ e => {
-                const users = {hobbies: e.target.value};
-                this.setState({
-                  users: Object.assign(this.state.users,users),
-                  hobbiesFieldValue: e.target.value
-                });
+                 const users = {hobbies: e.target.value};
+                 this.setState({
+                   users: Object.assign(this.state.users,users),
+                   hobbiesFieldValue: e.target.value
+                 });
                }}/>
           </div>
         <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './stylesheets/createUserStyles';
-
+import PropTypes from 'prop-types';
 
 class GetUsers extends React.Component {
 
@@ -46,15 +46,23 @@ class GetUsers extends React.Component {
         </styles.GetCombined>
       );
     });
-    
+
     return (
   <div>
     {userDivs}
-    
+
   </div>
-  
+
     );
   }
 }
+
+GetUsers.propTypes = {
+  getUsers: PropTypes.func.isRequired,
+  deleteUsers: PropTypes.func.isRequired,
+  loadUsers: PropTypes.func.isRequired,
+  match: PropTypes.string.isRequired,
+  users: PropTypes.string.isRequired
+};
 
 export default GetUsers;
