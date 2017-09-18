@@ -46,10 +46,13 @@ class GetUsers extends React.Component {
         </styles.GetCombined>
       );
     });
+    
     return (
   <div>
     {userDivs}
+    
   </div>
+  
     );
   }
 }

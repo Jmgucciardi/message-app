@@ -26,6 +26,7 @@ class CreateUsers extends React.Component {
     };
   }
 
+
   render() {
     return (
       <styles.Basic>
@@ -50,7 +51,7 @@ class CreateUsers extends React.Component {
           <div>
           <p>
 
-            Lastname: <input value = {this.state.lastNameFieldValue}
+             <input value = {this.state.lastNameFieldValue} placeholder = "Lastname..."
               onChange={ e => {
                 const users = {lastname: e.target.value};
                 this.setState({
@@ -62,7 +63,7 @@ class CreateUsers extends React.Component {
           </div>
           <div>
           <p>
-            Firstname: <input value = {this.state.firstNameFieldValue}
+             <input value = {this.state.firstNameFieldValue} placeholder = "Firstname..."
               onChange={ e => {
                 const users = {firstname: e.target.value};
                 this.setState({
@@ -74,7 +75,7 @@ class CreateUsers extends React.Component {
           </div>
         <div>
         <p>
-            Avatar: <input value = {this.state.avatarFieldValue}
+             <input value = {this.state.avatarFieldValue} placeholder = "Avatar..."
               onChange={ e => {
                 const users = {avatar: e.target.value};
                 this.setState({
@@ -86,7 +87,7 @@ class CreateUsers extends React.Component {
           </div>
           <div>
           <p>
-            Address: <input value = {this.state.addressFieldValue}
+             <input value = {this.state.addressFieldValue} placeholder = "Address"
               onChange={ e => {
                 const users = {address: e.target.value};
                 this.setState({
@@ -98,7 +99,7 @@ class CreateUsers extends React.Component {
           </div>
         <div>
         <p>
-            Phonenumber: <input value = {this.state.phoneNumberFieldValue}
+             <input value = {this.state.phoneNumberFieldValue} placeholder = "Phonenumber..."
               onChange={ e => {
                 const users = {phonenumber: e.target.value};
                 this.setState({
@@ -109,7 +110,7 @@ class CreateUsers extends React.Component {
             </p>
           </div>
           <div>
-            Hobbies: <input value = {this.state.hobbiesFieldValue}
+             <input value = {this.state.hobbiesFieldValue} placeholder = "Hobbies"
                onChange={ e => {
                 const users = {hobbies: e.target.value};
                 this.setState({
@@ -120,7 +121,7 @@ class CreateUsers extends React.Component {
           </div>
         <div>
             <p>
-            Username: <input value = {this.state.userNameFieldValue}
+             <input value = {this.state.userNameFieldValue} placeholder = "Username"
               onChange={ e => {
                 const users = {username: e.target.value};
                 this.setState({
@@ -136,7 +137,6 @@ class CreateUsers extends React.Component {
         </form>
       </div>
     </styles.Basic>
-
     );
   }
 }
